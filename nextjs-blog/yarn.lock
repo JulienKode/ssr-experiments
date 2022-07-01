@@ -199,6 +199,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@reduxjs/toolkit@patch:@reduxjs/toolkit@npm:1.8.3#.yarn/patches/@reduxjs-toolkit-npm-1.8.3-7a05ac0aba.patch::locator=my-app%40workspace%3A.":
+  version: 1.8.3
+  resolution: "@reduxjs/toolkit@patch:@reduxjs/toolkit@npm%3A1.8.3#.yarn/patches/@reduxjs-toolkit-npm-1.8.3-7a05ac0aba.patch::version=1.8.3&hash=a3b60c&locator=my-app%40workspace%3A."
+  dependencies:
+    immer: ^9.0.7
+    redux: ^4.1.2
+    redux-thunk: ^2.4.1
+    reselect: ^4.1.5
+  peerDependencies:
+    react: ^16.9.0 || ^17.0.0 || ^18
+    react-redux: ^7.2.1 || ^8.0.2
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-redux:
+      optional: true
+  checksum: 6042f60bb5643dc1c0aa6b2e42316adf9653647e52ccdaa08a796c8c1337f68a51e1bc48429e1818e6d1cbd1a1cdd6fc27aa25ea9dba4091126cba0ceb08019f
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
