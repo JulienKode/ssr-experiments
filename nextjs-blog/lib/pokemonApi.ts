@@ -1,6 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export const pokemonApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://pokeapi.co/api/v2/",
@@ -16,7 +20,17 @@ export const pokemonApi = createApi({
       { species: { name: string }; sprites: { front_shiny: string } },
       string
     >({
-      query: (name) => `pokemon/${name}`,
+      queryFn: async (name) => {
+
+        await delay(10000);
+
+        return {
+          data: {
+            species: { name: name },
+            sprites: { front_shiny: "stuff" }
+          },
+        };
+      },
     }),
     getPokemonList: builder.query<{ results: Array<{ name: string }> }, void>({
       query: () => `pokemon/`,
